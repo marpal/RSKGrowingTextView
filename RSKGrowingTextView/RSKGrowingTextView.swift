@@ -257,6 +257,8 @@ public typealias HeightChangeUserActionsBlockType = ((_ oldHeight: CGFloat, _ ne
             let caretRect = self.caretRect(for: textPosition)
             let caretCenterRect = CGRect(x: caretRect.midX, y: caretRect.midY, width: 0.0, height: 0.0)
             scrollRectToVisibleConsideringInsets(caretCenterRect)
+        }else {
+            scrollRectToVisibleConsideringInsets(CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0))
         }
     }
     
